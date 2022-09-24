@@ -1,0 +1,23 @@
+@use "./components/reset.scss";
+
+@use "./components/pageSetting.scss";
+
+$color: black;
+
+body {
+  background-color: #77608d;
+  color: $color;
+}
+
+.header {
+  padding: 20px 0;
+  position: relative;
+  background-color: #161b22;
+  color: #fff;
+}
+
+.footer {
+  padding: 20px 0;
+  background-color: #bdcca2;
+  text-align: center;
+}
