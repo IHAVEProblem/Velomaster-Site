@@ -478,10 +478,34 @@ header .nav-links a {
 
 .table_content-left {
   width: 30%;
+  margin-top: 50px;
+}
+.table_content-left .table_option {
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.table_content-left .table-nav li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.table_content-left .table_option.active {
+  color: #eb5e28;
+  border-left: 2px solid #252422;
+  padding: 10px 15px;
+  transition: all 0.8s;
 }
 
 .table_content-right {
   width: 70%;
+}
+
+.table {
+  display: none;
+}
+
+.table_title {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .table_content table {
@@ -489,27 +513,119 @@ header .nav-links a {
 }
 .table_content td,
 .table_content th {
-  border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
   width: 100%;
+  font-weight: 600;
+}
+.table_content td {
+  background-color: #ccc5b9;
+}
+.table_content th:first-child {
+  padding: 8px 0px;
 }
 .table_content td:nth-child(2n+1) {
   background-color: #403d39;
+  color: #fff;
+}
+.table_content tr:nth-child(even) {
+  background-color: #ccc5b9;
+  color: #fff;
 }
 .table_content tr:nth-child(even) td:nth-child(1n+1) {
   background-color: #403d39;
 }
 .table_content tr:nth-child(even) td:nth-child(2n+1) {
-  background-color: #ffffff;
+  background-color: #ccc5b9;
+  color: #252422;
 }
 
 .active {
   display: block;
 }
 
-.hidden {
-  display: none;
+.main_cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.main_cards .service_cards_body {
+  background-color: #403d39;
+  color: #fffcf2;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+}
+.main_cards .service_card_title {
+  padding: 27px 10px;
+}
+.main_cards .service_card_price {
+  padding: 33px 0px;
+  background-color: #ccc5b9;
+  color: #403d39;
+}
+.main_cards .service_card_text {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 40px 10px;
+  margin-bottom: 50px;
+}
+.main_cards .service_card_text li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.main_service_description p {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 700;
+}
+
+.main_service_addServices {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.main_service_addServices .addServices_cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 400px);
+}
+.main_service_addServices .addServices_cards .addServices_card {
+  background-color: #403d39;
+  color: #fffcf2;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.main_service_addServices .addServices_cards .addServices_card .addServices_card_title {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 32px 28px 13px 28px;
+}
+.main_service_addServices .addServices_cards .addServices_card .addServices_card_price {
+  font-size: 24px;
+  font-weight: 700;
+  background-color: #ccc5b9;
+  color: #403d39;
+  padding: 38px 10px;
+}
+
+.block {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  padding: 36px 10px;
+}
+
+.main_callToAction {
+  background-color: #403d39;
+  color: #fffcf2;
+}
+
+.main_callUs {
+  color: #eb5e28;
+  text-transform: uppercase;
 }
 
 .footer {

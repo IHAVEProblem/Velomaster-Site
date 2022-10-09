@@ -400,9 +400,38 @@ header {
 }
 .table_content-left {
   width: 30%;
+  margin-top: 50px;
+  .table_option {
+    font-size: $fz-100;
+    font-weight: $fw-bold;
+    cursor: pointer;
+  }
+  .table-nav {
+    li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  .table_option.active {
+    color: $bg-second;
+    border-left: 2px solid #252422;
+    padding: 10px 15px;
+    transition: all 0.8s;
+  }
 }
 .table_content-right {
   width: 70%;
+}
+
+
+
+.table {
+  display: none;
+}
+
+
+.table_title {
+  font-size: $fz-300;
+  font-weight: $fw-bold;
 }
 
 .table_content {
@@ -411,21 +440,32 @@ header {
   }
   td,
   th {
-    border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
     width: 100%;
+    font-weight: $fw-semiBold;
+  }
+  td {
+    background-color: $bg-200;
+  }
+  th:first-child {
+    padding: 8px 0px;
   }
   td:nth-child(2n + 1) {
-    background-color: #403d39;
+    background-color: $bg-700;
+    color: #fff;
   }
+
   tr:nth-child(even) {
     td:nth-child(1n + 1) {
-      background-color: #403d39;
+      background-color: $bg-700;
     }
     td:nth-child(2n + 1) {
-      background-color: #ffffff;
+      background-color: $bg-200;
+      color: #252422;
     }
+    background-color: $bg-200;
+    color: #fff;
   }
 }
 
@@ -433,9 +473,95 @@ header {
   display: block;
 }
 
-.hidden {
-  display: none;
+
+.main_cards{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  .service_cards_body{
+    background-color: $bg-700;
+    color: $color-200;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: $fw-bold;
+    font-size: $fz-400;
+  }
+  .service_card_title{
+
+    padding: 27px 10px;
+  }
+  .service_card_price{
+    padding: 33px 0px;
+    background-color: $bg-200;
+    color: $bg-700;
+  }
+  .service_card_text{
+    font-size: $fz-100;
+    font-weight: $fw-regular;
+    padding: 40px 10px;
+    margin-bottom: 50px;
+  }
+  .service_card_text{
+    li:not(:last-child){
+      margin-bottom: 10px;
+    }
+
+  }
 }
+.main_service_description{
+  p{
+    text-align: center;
+    margin-top: 50px;
+    font-weight: $fw-bold;
+  }
+}
+
+.main_service_addServices{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  .addServices_cards{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 400px);
+    .addServices_card{
+      background-color: $bg-700;
+      color: $bg-primary;
+      text-align: center;
+      border-radius: 20px;
+      overflow: hidden;
+      .addServices_card_title{
+        font-size: $fz-300;
+        font-weight: $fw-bold;
+        padding: 32px 28px 13px 28px;
+      }
+      .addServices_card_price{
+        font-size: $fz-300;
+        font-weight: $fw-bold;
+        background-color: $bg-200;
+        color: $bg-700;
+        padding: 38px 10px;
+      }
+    }
+  }
+}
+
+.block{
+  text-align: center;
+  font-weight: $fw-bold;
+  font-size: $fz-400;
+  padding: 36px 10px;
+}
+
+.main_callToAction{
+  background-color: $bg-700;
+  color: $bg-primary;
+}
+.main_callUs{
+  color: $bg-second;
+  text-transform: uppercase;
+}
+
 .footer {
   padding: 20px 0;
   background-color: #bdcca2;
