@@ -32,6 +32,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
     tables.forEach(elem => elem.classList.remove('active'))
     table1.classList.add('active');
+    tables.forEach(elem => elem.classList.remove('op'))
+    setTimeout(function () {
+      table1.classList.add('op');
+    }, 20);
   };
   function showTable2(){
 
@@ -40,6 +44,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
     tables.forEach(elem => elem.classList.remove('active'))
     table2.classList.add('active');
+    tables.forEach(elem => elem.classList.remove('op'))
+    setTimeout(function () {
+      table2.classList.add('op');
+    }, 20);
   };
   function showTable3(){
 
@@ -48,6 +56,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
     tables.forEach(elem => elem.classList.remove('active'))
     table3.classList.add('active');
+    tables.forEach(elem => elem.classList.remove('op'))
+    setTimeout(function () {
+      table3.classList.add('op');
+    }, 20);
   };
   function showTable4(){
 
@@ -56,6 +68,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
     tables.forEach(elem => elem.classList.remove('active'))
     table4.classList.add('active');
+    tables.forEach(elem => elem.classList.remove('op'))
+    setTimeout(function () {
+      table4.classList.add('op');
+    }, 20);
   };
 
   tab1.addEventListener('click', showTable1);
