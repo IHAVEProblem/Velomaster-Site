@@ -377,10 +377,10 @@
               <input type="text" id="sub-subject" name="subject" placeholder="Ваша тема..">
             </div>
             <div class="form_subject ">
-              <textarea id="subject" name="subject" placeholder="Напишите нам что-нибудь.. Эта форма вправду работает, пожалуйста не пишите в ней, а то мне на почту будут приходить ваши сообщения.." style="height:200px" required></textarea>
+              <textarea id="subject" name="subject" placeholder="Напишите нам что-нибудь.. " required></textarea>
             </div>
             <div class="form_btn">
-              <button class="button" type="submit" value="Submit"> НАПИСАТЬ НАМ </button>
+              <button class="button" type="submit"> НАПИСАТЬ НАМ </button>
             </div>
           </form>
         </div>
@@ -390,19 +390,8 @@
   </div>
   <script>
     function sendEmail() {
-    Email.send({
-      SecureToken: 'af0b33e1-bca1-4ab3-8513-793e019c1c75',
-      To : 'arsik0202@gmail.com',
-      From :  document.getElementById("email").value,
-      Subject : "Привет! " + document.getElementById("sub-subject").value,
-      Body : "Имя: " + document.getElementById("fname").value +
-      "<br> Email: " + document.getElementById("email").value +
-      "<br> Телефон: " + document.getElementById("tel").value +
-      "<br> Subject: " + document.getElementById("subject").value
-  }).then(
-    message => alert("Спасибо за сообщение, мы ответим вам в ближайщие часы.")
-  );
-  }
+      alert("Спасибо за сообщение, мы ответим вам в ближайщие часы.")
+    }
   </script>
 </body>
 </html>
