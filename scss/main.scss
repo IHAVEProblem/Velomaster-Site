@@ -562,9 +562,127 @@ header {
   background-color: $bg-700;
   color: $bg-primary;
 }
-.main_callUs{
+.main_textUs{
   color: $bg-second;
   text-transform: uppercase;
+}
+
+.main_contact_menu {
+  display: flex;
+  flex-direction: row;
+}
+.contact_map{
+  width: 75%;
+
+}
+
+.contact_information{
+  width: 25%;
+  height: 540px;
+  padding: 40px 50px;
+  background-color: $bg-200;
+  .contct_main-title{
+    text-transform: uppercase;
+    color: $bg-700;
+    font-weight: $fw-bold;
+    font-size: $fz-300;
+    margin-bottom: 70px;
+    letter-spacing: 1px;
+    line-height: 24px;
+  }
+  .contact_title{
+    text-transform: uppercase;
+    color: $bg-700;
+    font-weight: $fw-bold;
+    font-size: $fz-300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    line-height: 24px;
+  }
+  .contact_text{
+    color: $bg-700;
+    font-weight: $fw-regular;
+    font-size: $fz-300;
+    margin-bottom: 38px;
+    letter-spacing: 1px;
+    line-height: 24px;
+  }
+}
+.main_form_textUs{
+  background-color: $bg-700;
+  padding: 90px 0px;
+  .form_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+      max-width: 840px;
+      width: 100%;
+    }
+    .text-form{
+      margin-bottom: 50px;
+    }
+
+    .form_row1{
+      display: inline-flex;
+      width: 100%;
+      #fname{
+        width: 50%;
+        margin-right: 40px;
+      }
+      #email {
+        width: 50%;
+      }
+    }
+
+    .form_row2{
+      display: inline-flex;
+      width: 100%;
+      #tel{
+        width: 35%;
+        margin-right: 40px;
+      }
+      #sub-subject {
+        width: 65%;
+      }
+    }
+    input, textarea {
+      width: 100%;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid $color-900;
+      resize: none;
+      background-color: $bg-200;
+      color: $bg-700;
+      outline: none;
+      transition: all 0.3s;
+    }
+    input:focus, textarea:focus {
+      border: 2px solid $color-100;
+    }
+    textarea {
+      max-height: 120px;
+    }
+    .form_btn {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      .button{
+        border-radius: 20px;
+        padding: 20px;
+        background-color: $bg-second;
+        color: $color-100;
+        border: 2px solid #eb5e28;
+        cursor: pointer;
+        transition: all 0.3s;
+        outline: none;
+      }
+      .button:hover, .button:focus{
+        opacity: 0.9;
+        border: 2px solid #fff;
+      }
+    }
+  }
 }
 
 .footer {

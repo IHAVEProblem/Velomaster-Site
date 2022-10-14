@@ -10,6 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
   <link rel="stylesheet" href="./css/main.css">
+  <!-- scripts -->
+  <script src="https://smtpjs.com/v3/smtp.js" defer></script>
+  <script type="module" src="./js/main.js" defer></script>
+  <!--  -->
   <title>VELOMASTER</title>
 </head>
 <body>
@@ -346,9 +350,11 @@
       <div class="main_callToAction block">Не нашли нужной услуги?</div>
       <div class="main_callUs block">Свяжитесь с нами</div>
       <div class="main_contact_menu">
-        <div class="contact_map"></div>
+        <div class="contact_map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18363.87740842151!2d37.176985631934365!3d54.87685935513599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413519b3d989da9b%3A0xfa7e657044434dd0!2z0J_RgNC-0YLQstC40L3Qviwg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1665752721832!5m2!1sru!2sru" width="100%" height="540" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <div class="contact_information">
-          <h2>Наши контакты</h2>
+          <h2 class="contct_main-title">Наши контакты</h2>
           <h3 class="contact_title">Адрес</h3>
           <p class="contact_text">г.Протвино <br> Ул.Южная д.2</p>
           <h3 class="contact_title">ТЕЛЕФОН</h3>
@@ -357,10 +363,46 @@
           <p class="contact_text"><a href = "mailto: abc@example.com">VELO@master.com</a></p>
         </div>
       </div>
-      <div class="main_callUs block">Напишите нам</div>
+      <div class="main_textUs block">Напишите нам</div>
+
+      <section class="main_form_textUs">
+        <div class="form_container _container">
+          <form onsubmit="sendEmail(); reset(); return false;">
+            <div class="form_row1 text-form">
+              <input type="text" id="fname" name="firstname" placeholder="Ваше имя.." required>
+              <input type="email" id="email" name="mail" placeholder="Ваша почта.." required>
+            </div>
+            <div class="form_row2 text-form">
+              <input type="tel" id="tel" name="tel" placeholder="Ваш телефон..">
+              <input type="text" id="sub-subject" name="subject" placeholder="Ваша тема..">
+            </div>
+            <div class="form_subject ">
+              <textarea id="subject" name="subject" placeholder="Напишите нам что-нибудь.. Эта форма вправду работает, пожалуйста не пишите в ней, а то мне на почту будут приходить ваши сообщения.." style="height:200px" required></textarea>
+            </div>
+            <div class="form_btn">
+              <button class="button" type="submit" value="Submit"> НАПИСАТЬ НАМ </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="footer">ya footer</footer>
   </div>
-  <script type="module" src="./js/main.js"></script>
+  <script>
+    function sendEmail() {
+    Email.send({
+      SecureToken: 'ac4aed0b-4e13-4d81-946f-d4a896d4716d',
+      To : 'arsik0202@gmail.com',
+      From :  document.getElementById("email").value,
+      Subject : "Привет! " + document.getElementById("sub-subject").value,
+      Body : "Имя: " + document.getElementById("fname").value +
+      "<br> Email: " + document.getElementById("email").value +
+      "<br> Телефон: " + document.getElementById("tel").value +
+      "<br> Subject: " + document.getElementById("subject").value
+  }).then(
+    message => alert("Спасибо за сообщение, мы ответим вам в ближайщие часы.")
+  );
+  }
+  </script>
 </body>
 </html>
