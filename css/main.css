@@ -747,7 +747,7 @@ header .nav-links a {
   outline: none;
 }
 .main_form_textUs .form_container .form_btn .button:hover, .main_form_textUs .form_container .form_btn .button:focus {
-  opacity: 0.9;
+  opacity: 0.8;
   border: 2px solid #fff;
 }
 
