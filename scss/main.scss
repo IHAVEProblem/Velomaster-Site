@@ -35,7 +35,7 @@ header {
   gap: 1rem;
   padding: 20px 0px;
   background-color: $bg-second;
-  color: $color-300;
+  color: $color-100;
   // @media (max-width: 35rem) {
   //   padding: 10px 0px;
   // }
@@ -69,16 +69,26 @@ header {
   .nav-links {
     li {
       display: inline-block;
+      transition: all 0.3s;
+      border: 2px solid $bg-second;
     }
     li:not(:last-child) {
-      margin-right: 77px;
+      margin-right: 50px;
     }
     a {
       text-decoration: none;
-      color: $color-300;
+      color: $color-100;
+      border: 2px solid $bg-second;
       font-size: $fz-100;
       font-weight: $fw-semiBold;
+      padding: 8px;
+      transition: all 0.3s;
     }
+      a:hover{
+        border: 2px solid $bg-primary;
+        opacity: 0.9;
+        // color: $bg-second;
+      }
   }
 }
 
@@ -138,6 +148,7 @@ header {
 .main_btn-to-contacts:hover {
   background-color: $bg-second;
   color: $color-300;
+  border: 2px solid $bg-primary;
 }
 
 .benefits_container {
@@ -264,9 +275,13 @@ header {
 
 .specialist_socials > a {
   display: inline-block;
+  transition: all 0.3s;
 }
 .specialist_socials > a:not(:last-child) {
   margin-right: 20px;
+}
+.specialist_socials > a:hover{
+  opacity: 0.7;
 }
 
 .main_lable2 {
@@ -405,6 +420,7 @@ header {
     font-size: $fz-100;
     font-weight: $fw-bold;
     cursor: pointer;
+    border-left: 2px solid $bg-primary;
   }
   .table-nav {
     li:not(:last-child) {
@@ -422,12 +438,30 @@ header {
   width: 70%;
 }
 
+@media (max-width: 620px){
+  .content_title {
+    margin: 40px 0px;
+  }
+  .table_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .table_content-right {
+    width: 100%;
 
+  }
+  .table_content-left {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+}
 
 .table {
   display: none;
   opacity: 0;
-  transition: opacity 900ms;
+  transition: opacity 2s ease-out;
 }
 
 .op{
@@ -490,6 +524,35 @@ header {
     text-align: center;
     font-weight: $fw-bold;
     font-size: $fz-400;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 60rem) {
+    grid-template-columns: repeat(2, 1fr);
+    .service1 {
+      grid-area: s1;
+    }
+
+    .service2 {
+      grid-area: s2;
+    }
+
+    .service3 {
+      grid-area: s3;
+    }
+    grid-template-areas:
+      "s1 s2"
+      "s3 s3";
+  }
+  @media (max-width: 38rem) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "s1"
+      "s2"
+      "s3";
+  }
+  .service_cards_body:hover{
+    scale: 1.01;
   }
   .service_card_title{
 
@@ -529,12 +592,16 @@ header {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(2, 400px);
+    @media (max-width: 850px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     .addServices_card{
       background-color: $bg-700;
       color: $bg-primary;
       text-align: center;
       border-radius: 20px;
       overflow: hidden;
+      transition: all 0.3s;
       .addServices_card_title{
         font-size: $fz-300;
         font-weight: $fw-bold;
@@ -547,6 +614,9 @@ header {
         color: $bg-700;
         padding: 38px 10px;
       }
+    }
+    .addServices_card:hover{
+      scale: 1.01;
     }
   }
 }
@@ -573,7 +643,6 @@ header {
 }
 .contact_map{
   width: 75%;
-
 }
 
 .contact_information{
@@ -606,6 +675,29 @@ header {
     margin-bottom: 38px;
     letter-spacing: 1px;
     line-height: 24px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .contact_map{
+    width: 60%;
+  }
+  .contact_information{
+    width: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  .main_contact_menu{
+    flex-direction: column-reverse;
+  }
+  .contact_map{
+
+    width: 100%;
+  }
+  .contact_information{
+    justify-content: center;
+    width: 100%;
   }
 }
 .main_form_textUs{
@@ -644,6 +736,21 @@ header {
       }
       #sub-subject {
         width: 65%;
+      }
+    }
+    @media (max-width: 38rem){
+      .text-form{
+        margin-bottom: 30px;
+      }
+      .form_row2{
+      #tel{
+        margin-right: 20px;
+      }
+    }
+      .form_row1{
+      #fname{
+        margin-right: 20px;
+       }
       }
     }
     input, textarea {
@@ -695,6 +802,7 @@ header {
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+
     ._title{
       font-size: $fz-300;
       font-weight: $fw-bold;
@@ -736,6 +844,32 @@ header {
       a:not(:last-child){
         margin-right: 10px;
       }
+    }
+    @media (max-width: 38rem) {
+      grid-template-columns: repeat(1, 1fr);
+      .footer_navigation {
+        text-align: center;
+        font-size: $fz-200;
+        grid-area: navigation;
+        margin-bottom: 40px;
+      }
+
+      .footer_contacts {
+        text-align: center;
+        font-size: $fz-200;
+        grid-area: contacts;
+        margin-bottom: 40px;
+      }
+
+      .footer_socials {
+        text-align: center;
+        grid-area: socials;
+      }
+      grid-template-areas:
+        "contacts"
+        "navigation"
+        "socials";
+
     }
   }
 }
