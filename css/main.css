@@ -747,12 +747,68 @@ header .nav-links a {
   outline: none;
 }
 .main_form_textUs .form_container .form_btn .button:hover, .main_form_textUs .form_container .form_btn .button:focus {
-  opacity: 0.8;
+  opacity: 0.9;
   border: 2px solid #fff;
 }
 
 .footer {
-  padding: 20px 0;
-  background-color: #bdcca2;
+  padding: 100px 0;
+  background-color: #ccc5b9;
+}
+.footer .footer_container {
+  display: grid;
+  max-width: 1000px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.footer .footer_container ._title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 auto;
+}
+.footer .footer_container .navigation_list {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+.footer .footer_container .navigation_list a {
+  text-decoration: none;
+  color: #403d39;
+}
+.footer .footer_container .navigation_list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer .footer_container .contacts_title {
+  margin-bottom: 30px;
+}
+.footer .footer_container .text_title {
+  font-size: 16px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+.footer .footer_container .text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.footer .footer_container .socials_title {
+  margin-bottom: 30px;
+}
+.footer .footer_container .socials-images a {
+  display: inline-block;
+}
+.footer .footer_container .socials-images a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.copyright {
   text-align: center;
+  background-color: #ccc5b9;
+}
+.copyright a {
+  color: #eb5e28;
+  text-decoration: none;
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */
