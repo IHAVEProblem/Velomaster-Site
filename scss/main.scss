@@ -325,6 +325,9 @@ header {
     &:nth-child(n) {
       border-style: none none solid none;
     }
+    &:last-child {
+      border-style: none;
+    }
   }
 }
 
@@ -847,6 +850,9 @@ header {
     }
     @media (max-width: 38rem) {
       grid-template-columns: repeat(1, 1fr);
+      .content_title {
+        margin: 40px 0px;
+      }
       .footer_navigation {
         text-align: center;
         font-size: $fz-200;
