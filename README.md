@@ -1,4 +1,4 @@
 # Velomaster-Site
 Velomaster landing page
 
-not done yet
+animations are not completed yet
